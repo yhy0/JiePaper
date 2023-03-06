@@ -2,8 +2,8 @@ site_name: Jie 扫描器
 site_url: https://jie.fireline.fun/
 site_author: yhy
 site_description: "Jie 扫描器"
-repo_name: yhy0/JiePaper
-repo_url: https://github.com/yhy0/JiePaper
+repo_name: yhy0/Jie
+repo_url: https://github.com/yhy0/Jie
 copyright: Copyright &copy;  yhy
 theme:
   name: material
@@ -68,7 +68,8 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/redhat
-      link: https://fireline.fun
+      link: https://github.com/yhy0
       name: yhy
 nav:
   - "index.md"
+  - SQL 注入: "sql/sqlmap.md"
