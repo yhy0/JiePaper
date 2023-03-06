@@ -6,6 +6,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://jie.fireline.fun/Jie/Jie/</loc>
+         <lastmod>2023-03-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://jie.fireline.fun/sql/sqlmap/</loc>
          <lastmod>2023-03-06</lastmod>
          <changefreq>daily</changefreq>
