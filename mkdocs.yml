@@ -1,0 +1,74 @@
+site_name: Jie 扫描器
+site_url: https://jie.fireline.fun/
+site_author: yhy
+site_description: "Jie 扫描器"
+repo_name: yhy0/JiePaper
+repo_url: https://github.com/yhy0/JiePaper
+copyright: Copyright &copy;  yhy
+theme:
+  name: material
+  custom_dir: overrides
+  font: false
+  language: zh
+  icon:
+    logo: fontawesome/brands/linux
+    repo: fontawesome/brands/git-alt
+  favicon: https://fireline.fun/img/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotate 
+  palette:
+    # Toggle light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+    # Toggle dark mode
+    - scheme: slate
+      primary: black
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+markdown_extensions:
+  - pymdownx.highlight:
+      use_pygments: true
+      auto_title: true
+      anchor_linenums: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+plugins:
+  - git-revision-date
+  - search:
+      prebuild_index: true
+      lang:
+        - en
+        - ja
+  - glightbox
+edit_uri: edit/main/docs/
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/redhat
+      link: https://fireline.fun
+      name: yhy
+nav:
+  - "index.md"
