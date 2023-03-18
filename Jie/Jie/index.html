@@ -102,7 +102,7 @@
     </a>
 </li>
 <li class="md-tabs__item">
-<a class="md-tabs__link" href="../..">
+<a class="md-tabs__link" href="../../xss/xss/">
       XSS
     </a>
 </li>
@@ -216,8 +216,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sql-todo">
-    SQL 注入  TODO
+<a class="md-nav__link" href="#sql">
+    SQL 注入
   </a>
 </li>
 <li class="md-nav__item">
@@ -234,6 +234,12 @@
 <a class="md-nav__link" href="#_9">
     一些其他漏洞
   </a>
+<nav aria-label="一些其他漏洞" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    敏感信息
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#fastjson">
@@ -247,12 +253,25 @@
 </nav>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#license">
+    License
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#star-history">
+    Star History
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
 <a class="md-nav__link" href="../../sql/sqlmap/">
         SQL 注入
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../..">
+<a class="md-nav__link" href="../../xss/xss/">
         XSS
       </a>
 </li>
@@ -332,8 +351,8 @@
   </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#sql-todo">
-    SQL 注入  TODO
+<a class="md-nav__link" href="#sql">
+    SQL 注入
   </a>
 </li>
 <li class="md-nav__item">
@@ -350,6 +369,12 @@
 <a class="md-nav__link" href="#_9">
     一些其他漏洞
   </a>
+<nav aria-label="一些其他漏洞" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    敏感信息
+  </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#fastjson">
@@ -358,6 +383,19 @@
 </li>
 </ul>
 </nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#license">
+    License
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#star-history">
+    Star History
+  </a>
 </li>
 </ul>
 </nav>
@@ -371,6 +409,7 @@
 </a>
 <h1>Jie</h1>
 <h2 id="_1">劫(开发中)<a class="headerlink" href="#_1" title="Permanent link">¶</a></h2>
+<p>https://jie.fireline.fun/</p>
 <p>基于浏览器爬虫开发的web漏洞主动 (被动) 扫描器</p>
 <p>由于扫描器只是粗暴的调用 xray、nuclei ，不优雅，而且 xray 不开源，不开源的东西我加入自己的扫描器用着不舒服(纯属给自己挖坑，就当给自己加深漏洞理解了，开发中代码很烂勿喷)。于是产生一个想法，将漏扫类项目拆分出来，重新糅合成一个轮子。</p>
 <p>目前打算设计成两种模式:</p>
@@ -384,7 +423,7 @@
 <li>指纹识别，根据指纹识别进行漏洞检测(nuclei)</li>
 <li>基础漏洞扫描 (sql、xss 等) 待优化</li>
 <li>目录扫描(bbscan规则)</li>
-<li>一些端口弱口令爆破</li>
+<li>~~一些端口弱口令爆破~~(这还要在加上端口扫描，先去除)</li>
 </ul>
 <h2 id="_3">语言环境识别<a class="headerlink" href="#_3" title="Permanent link">¶</a></h2>
 <p>防止对 php 的网站调用 java 的扫描插件</p>
@@ -400,13 +439,22 @@
 <p>https://github.com/projectdiscovery/katana</p>
 <p>添加了无头浏览器检测绕过 https://bot.sannysoft.com/</p>
 <p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://cdn.jsdelivr.net/gh/yhy0/PicGoImg@master/img/202303062213518.png"><img alt="BypassHeadlessDetect.png" src="https://cdn.jsdelivr.net/gh/yhy0/PicGoImg@master/img/202303062213518.png"/></a></p>
+<p>如果报错
+error while loading shared libraries:</p>
+<p>手动安装缺失的库</p>
+<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a href="#__codelineno-0-1" id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="w">    </span>yum<span class="w"> </span>install<span class="w"> </span>libpcap-devel<span class="w"> </span>或<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>libpcap-dev<span class="w"> </span>
+<a href="#__codelineno-0-2" id="__codelineno-0-2" name="__codelineno-0-2"></a>apt-get<span class="w"> </span>install<span class="w"> </span>libpangocairo-1.0-0<span class="w"> </span>libx11-xcb1<span class="w"> </span>libxcomposite1<span class="w"> </span>libxcursor1<span class="w"> </span>libxdamage1<span class="w"> </span>libxi6<span class="w"> </span>libxtst6<span class="w"> </span>libnss3<span class="w"> </span>libcups2<span class="w"> </span>libxss1<span class="w"> </span>libxrandr2<span class="w"> </span>libasound2<span class="w"> </span>libatk1.0-0<span class="w"> </span>libgtk-3-0
+</code></pre></div>
+<p>都不行，手动安装</p>
+<p>https://go-rod.github.io/#/compatibility</p>
 <h3 id="_7">被动扫描代理<a class="headerlink" href="#_7" title="Permanent link">¶</a></h3>
 <p>https://github.com/lqqyt2423/go-mitmproxy</p>
 <h3 id="xss">Xss<a class="headerlink" href="#xss" title="Permanent link">¶</a></h3>
-<p>https://github.com/hahwul/dalfox 什么玩意，发的包也太多了，后续去掉</p>
+<p>语义分析、原型链污染、dom 污染点传播分析</p>
+<p>https://github.com/w-digital-scanner/w13scan</p>
 <p>https://github.com/ac0d3r/xssfinder</p>
 <p>https://github.com/kleiton0x00/ppmap</p>
-<h3 id="sql-todo">SQL 注入  TODO<a class="headerlink" href="#sql-todo" title="Permanent link">¶</a></h3>
+<h3 id="sql">SQL 注入<a class="headerlink" href="#sql" title="Permanent link">¶</a></h3>
 <p>提取 <a href="https://github.com/sqlmapproject/sqlmap">sqlmap</a> 中关于检测的代码，提取一部分思想就行了</p>
 <h3 id="poc">poc<a class="headerlink" href="#poc" title="Permanent link">¶</a></h3>
 <p>通过指纹识别进行对应的漏洞检测</p>
@@ -423,8 +471,14 @@ response.status == 200 &amp;&amp; response.headers["content-type"] == "text/css"
 <p>https://github.com/wrenchonline/glint 作者设计的我看不懂，自己重来</p>
 <p>https://github.com/veo/vscan    </p>
 <h3 id="_9">一些其他漏洞<a class="headerlink" href="#_9" title="Permanent link">¶</a></h3>
-<h3 id="fastjson">Fastjson<a class="headerlink" href="#fastjson" title="Permanent link">¶</a></h3>
+<h4 id="_10">敏感信息<a class="headerlink" href="#_10" title="Permanent link">¶</a></h4>
+<p>https://github.com/mazen160/secrets-patterns-db</p>
+<h4 id="fastjson">Fastjson<a class="headerlink" href="#fastjson" title="Permanent link">¶</a></h4>
 <p>https://github.com/a1phaboy/FastjsonScan</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">¶</a></h2>
+<p>This code is distributed under the MIT license. See <a href="https://github.com/prompt-engineering/click-prompt/blob/dev/LICENSE">LICENSE</a> in this directory.</p>
+<h2 id="star-history">Star History<a class="headerlink" href="#star-history" title="Permanent link">¶</a></h2>
+<p><a href="https://star-history.com/#yhy0/Jie&amp;Date"><img alt="Star History Chart" src="https://api.star-history.com/svg?repos=yhy0/Jie&amp;type=Date"/></a></p>
 <hr/>
 <div class="md-source-file">
 <small>
