@@ -126,6 +126,11 @@
       命令执行
     </a>
 </li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../sensitive/sensitive/">
+      敏感信息检测
+    </a>
+</li>
 </ul>
 </div>
 </nav>
@@ -231,6 +236,11 @@
         命令执行
       </a>
 </li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../sensitive/sensitive/">
+        敏感信息检测
+      </a>
+</li>
 </ul>
 </nav>
 </div>
@@ -313,7 +323,7 @@
 <p>具体的详细内容可以看这篇文章 https://pines-cheng.github.io/blog/#/posts/55</p>
 </blockquote>
 <p>https://zhuanlan.zhihu.com/p/450310103</p>
-<p>~~将上述缝合进 <a href="https://github.com/projectdiscovery/katana">katana</a>爬虫，因 <a href="https://github.com/projectdiscovery/katana">katana</a> 使用 <a href="https://github.com/go-rod/rod">rod</a> 作为 Devtools 驱动, 需要研究一下类似的实现，流程~~ 改用了 <a href="https://github.com/Ciyfly/Argo">Argo</a> 爬虫，逻辑一样，具体实现看代码</p>
+<p>将上述缝合进 <a href="https://github.com/projectdiscovery/katana">katana</a>爬虫，因 <a href="https://github.com/projectdiscovery/katana">katana</a> 使用 <a href="https://github.com/go-rod/rod">rod</a> 作为 Devtools 驱动, 需要研究一下类似的实现。 流程</p>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a href="#__codelineno-1-1" id="__codelineno-1-1" name="__codelineno-1-1"></a>拦截返回包 --&gt; 提取 js 并对 js 进行解析转换 --&gt; 追加解析转换后的 js 代码到返回包中 --&gt; 通过浏览器执行 js实现污染传播分析 --&gt; 判断 rod 绑定运行时是否执行 --&gt; dom xss
 </code></pre></div>
 <p>执行<code>preload.js</code>, <code>katana/pkg/engine/hybrid/crawl.go</code>的<code>navigateRequest</code>方法添加 </p>
@@ -389,7 +399,7 @@
 <small>
     
       最后更新:
-      2023-03-21
+      2023-04-14
     
   </small>
 </div>
@@ -410,6 +420,19 @@
               </span>
               SQL 注入
             </div>
+</div>
+</a>
+<a aria-label="下一页: 敏感信息检测" class="md-footer__link md-footer__link--next" href="../../sensitive/sensitive/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              敏感信息检测
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
 </div>
 </a>
 </nav>
